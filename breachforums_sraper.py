@@ -71,17 +71,22 @@ def scrape_forum(url, num_pages, filename_prefix):
     logger.info(f"Data saved to {filename}")
     logger.info("Scraping completed.")
 
-# Scraping Databases forum
+# Scraping Databases
 base_url_db = 'https://breachforums.st/Forum-Databases?page={}&sortby=started'
-num_pages_db = 1
+num_pages_db = 5
 scrape_forum(base_url_db, num_pages_db, 'scraped_breachforums_db')
 
-# Scraping Other Leaks forum
+# Scraping Other Leaks
 base_url_leaks = 'https://breachforums.st/Forum-Other-Leaks?page={}&sortby=started'
-num_pages_leaks = 1
+num_pages_leaks = 5
 scrape_forum(base_url_leaks, num_pages_leaks, 'scraped_breachforums_leaks')
 
-# Scraping Official Databases forum
+# Scraping Official Databases
 base_url_off_db = 'https://breachforums.st/Forum-Official?page={}&sortby=started'
-num_pages_db = 1
+num_pages_db = 5
 scrape_forum(base_url_off_db, num_pages_db, 'scraped_breachforums_off_db')
+
+# Scraping Marketplace
+base_url_off_db = 'https://breachforums.st/Forum-Sellers-Place?page={}&sortby=started'
+num_pages_db = 5
+scrape_forum(base_url_off_db, num_pages_db, 'scraped_breachforums_market')
